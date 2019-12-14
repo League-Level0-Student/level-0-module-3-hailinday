@@ -26,7 +26,7 @@ public class BirthdayReminder {
 		} else if (asked.equals("you")) {
 			System.out.println(myBirthday);
 		} else {
-			JOptionPane.showMessageDialog(null, "Dont now that person");
+			JOptionPane.showMessageDialog(null, "Dont know that person");
 		}
 		// 4. if user asked for "mom"
 			//print mom's birthday

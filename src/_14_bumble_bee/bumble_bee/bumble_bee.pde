@@ -1,8 +1,22 @@
+int circleRings = 0;
+int circleX = 0;
+int circleY = 0;
 void draw() {
 /*Use a loop to make a body for the Bee!
 Then put his head on using drawBeeFace(x,y)
 Use Modulo to make the colors alternate 
 */
+  if( circleRings < 32){
+       if (circleRings % 2 == 0 ) {
+         fill(#F1FA05);
+        } 
+        else {
+         fill(#050505); 
+        }
+        ellipse(circleX += 12,circleY += 12,50,50);
+        circleRings++;
+  }
+  drawBeeFace(400,400);
 }
 
 void drawFlower(int x, int y) {

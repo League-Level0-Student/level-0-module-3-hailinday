@@ -1,30 +1,33 @@
 int circleWidth = 400;
-int circleHeight = 400;
 int circleRings = 0;
 int leftCircleX = 300;
 int leftCircleY = 300;
-int rightCircleX = 1200;
-int rightCircleY = 300;
+int rightCircleXPosition = 200;
+int circleHeight = 300;
+int rightCircleYPosition = 300;
+int value = 5;
+int circleSize = 400;
+
 void setup(){
 size(1500,600);
-noStroke();
-noFill();
+createRing();
+
 }
 
 void draw(){
-  
-  if( circleRings < 40){
-       if (circleRings % 2 == 0 ) {
-         fill(#050505);
-        } 
-        else {
-         fill(#FA0505); 
-        }
-     
-        ellipse(leftCircleX,leftCircleY,circleWidth -= 5,circleHeight -= 5);
-        ellipse(rightCircleX,rightCircleY,circleWidth -= 5,circleHeight -= 5);
-        circleRings++;
-        leftCircleX++;
-        rightCircleX--;
-  }
+ background(1);
+ rightCircleXPosition += 1;
+ createRing(); 
 }
+
+void createRing( ){
+  
+ for( int i = 0; i < 40; i++){
+   ellipse(rightCircleXPosition, circleHeight, circleSize, circleSize);
+   circleSize -= 10;
+ }
+ circleSize = 400;
+   
+   
+}
+  

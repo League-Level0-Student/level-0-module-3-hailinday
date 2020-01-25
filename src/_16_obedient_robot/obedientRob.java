@@ -12,9 +12,8 @@ public class obedientRob {
 	public static void main(String[] args) {
 		rob.penDown();
 		rob.setSpeed(100);
-		drawCircle();
 
-		String color = JOptionPane.showInputDialog("What color would you like the robot to draw in?");
+		String color = JOptionPane.showInputDialog("What color would you like the robot to draw in red,blue,green,black, or white?");
 
 		if (color.equals("red")) {
 			rob.setPenColor(Color.red);
